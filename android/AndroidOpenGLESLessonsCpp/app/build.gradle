@@ -12,9 +12,7 @@ android {
 
         externalNativeBuild {
             cmake {
-                cppFlags "-frtti -fexceptions"
-                arguments "-DANDROID_PLATFORM_LEVEL=${platformVersion}",
-                        '-DANDROID_TOOLCHAIN=clang', '-DANDROID_STL=gnustl_static'
+                arguments "-DANDROID_STL=c++_shared"
             }
         }
     }
